@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg--color: white;
+  --primary--color: #323238;
+
+  --bg--darkmode: #121214;
+  --button--darkmode--color: #C4C4CC;
+  --bg--button--darkmode-color: #29292E;
+  --bg--sound--button--on--darkmode--color: #0A3442;
+
+  --bg--sound--button--color: #E1E1E6;
+  --bg--sound--button--on--color: #02799D;
+  --sound-button--on--color: white;
+
+  font-size: 62.5%;
+}
+.button{
+  cursor: pointer;
+}
+
+.buttonDarkmodeOff {
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.buttonDarkmodeOn {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input{
+  position: absolute;
+  appearance: none;
+  height: 4px;
+  outline: none;
+  background-color: #323238;
+  border-radius: 5px;
+  bottom: 3.2rem;
+  width: 9rem;
+  margin-left: 2.4rem;
+  margin-top: 3.8rem;
+  z-index: 10;
+}
+
+.forest,
+.rain,
+.coffe,
+.fire{
+  position: relative;
+}
+
+.sounds svg{
+  margin-bottom: 7.2rem;;
+}
+
+input::-webkit-slider-thumb{
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #323238;
+
+}
+
+svg path {
+  fill: var(--primary--color);
+}
+
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  gap: 19.2rem;
+  justify-content: center;
+}
+
+.clock {
+  width: 32.1rem;
+}
+
+.sounds {
+  width: 30.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.2rem;
+}
+
+
+.timer {
+  color: var(--primary--color);
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+
+  margin-bottom: 4.8rem;
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.sounds button {
+  background-color: var(--bg--sound--button--color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  height: 15.2rem;
+  width: 13.8rem;
+}
+
+.on input, 
+.on input::-webkit-slider-thumb, 
+.darkmode input,
+.darkmode input::-webkit-slider-thumb
+{
+  background-color:  var(--sound-button--on--color);
+}
+
+
+.on button {
+  background-color: var(--bg--sound--button--on--color);
+}
+
+.on svg path {
+  fill: var(--sound-button--on--color);
+}
+
+.darkmode .sounds .on button {
+  background-color: var(--bg--sound--button--on--darkmode--color);
+}
+
+.darkmode button svg path {
+  fill: var(--button--darkmode--color);
+}
+
+.darkmode {
+  background-color: var(--bg--darkmode);
+  color: white;
+}
+
+.darkmode .sounds button {
+  background-color: var(--bg--button--darkmode-color);
+}
